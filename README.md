@@ -1,6 +1,7 @@
 # Final_Project_CMPE_491 Proposal:
 
-Visual Quality and Deterioration Monitoring System with AI
+AI-Powered Inventory and Quality Monitoring System
+
  Project Team: Erdem Atak, Zeynep Bakanoğulları, İrem Su Gül
 Advisor: Tansel Dökeroğlu
 Jury Members: Eren Ulu, Fırat Akba
