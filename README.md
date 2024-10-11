@@ -1,7 +1,5 @@
-# Final_Project_CMPE_491
+## Welcome to Our Project
 
-[View the Project Proposal](./proposal.md)
+This is the AI-Powered Inventory and Quality Monitoring System project, aiming to revolutionize stock management and quality control.
 
-
-
-
+[View the Project Proposal](./proposal/)
