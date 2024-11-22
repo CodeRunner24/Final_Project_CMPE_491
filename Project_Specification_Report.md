@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI-Powered Inventory and Quality Monitoring System
-permalink: /Project Specification Report/
+permalink: /SRS/
 ---
 
 # Project Specification Report: AI-Powered Inventory and Quality Monitoring System
