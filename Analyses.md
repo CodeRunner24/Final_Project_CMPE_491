@@ -4,131 +4,629 @@ title: AI-Powered Inventory and Quality Monitoring System
 permalink: /Analyses/
 ---
 
-Project Specification Report: AI-Powered
+<p>1
+22.11.2024
+TED
+UNIVERSITY
+CMPE 491
+Senior Project I
+Project
+Analysis ReportReport: AI Powered
 Inventory and Quality Monitoring System
-Project Team: Erdem Atak, Zeynep Bakanoğulları, İrem Su Gül
-Advisor: Tansel Dökeroğlu
-Jury Members: Eren Ulu, Fırat Akba
-1. Introduction
-1.1 Description
-The AI-Powered Inventory and Quality Monitoring System is an innovative solution designed to
-automate stock management and quality control processes using computer vision and machine learning
-techniques. This system aims to address the challenges faced by businesses dealing with large volumes of
-perishable goods in industries such as retail and food.
-The project will develop a comprehensive system that integrates real-time stock tracking, product
-quality assessment, deterioration level monitoring, expiration date tracking, and inventory forecasting. By
-leveraging image recognition and data analysis, the system will significantly reduce manual processes,
-minimize product waste, and optimize inventory management decisions.
-Key features of the system include:
-● Automated stock tracking
-● Product quality control through visual defect detection
-● Deterioration level assessment using machine learning model
-● Expiration date tracking
-● Inventory forecasting based on historical sales data analysis
-1.2 Constraints
-1. Economic:
-● Development costs for AI models and infrastructure
-● Potential need for specialized hardware (cameras)
-● Training costs for staff to use the new system
-2. Environmental:
-● Energy consumption of continuous image processing and data analysis
-● Energy consumption of deep learning model
-● Disposal considerations for any hardware components
-3. Social:
-● Potential resistance from employees due to fear of job displacement
-● Need for clear communication about the system's benefits and limitations
-4. Political:
-● Compliance with local and international regulations on data privacy and storage
-● Adherence to food safety standards and reporting requirements
-5. Ethical:
-● Ensuring fairness and avoiding bias in AI decision-making processes
-● Transparency in how the system makes inventory and quality assessments
-6. Health and Safety:
-● Ensuring the system accurately identifies health risks in perishable goods
-● Implementing fail-safes to prevent the sale of potentially harmful products
-7. Manufacturability:
-● Scalability of the system for different business sizes and types
-● Integration capabilities with existing inventory management systems
-8. Sustainability:
-● Long-term viability of the AI models and their ability to adapt to changing product
-lines
-● Sustainable data storage and processing practices
-1.3 Professional and Ethical Issues
-Data Privacy and Security:
-● The system will be designed with robust security measures to protect sensitive
-business data.
-● Compliance with data protection regulations, such as GDPR, will be ensured.
-Algorithmic Transparency:
-● Clear explanations of how the AI makes decisions will be provided.
-● Human oversight and the ability to intervene in critical decisions will be
-incorporated.
-Continuous Learning and Improvement:
-● The system will be continuously updated and improved to ensure optimal
-performance.
-● Advancements in AI and computer vision technologies will be monitored to keep
-the system up-to-date.
-Ethical Use of AI:
-● The AI will be restricted to inventory and quality management functions, avoiding
-use beyond its intended scope.
-● Broader implications of AI deployment in business operations will be considered to
-ensure ethical use.
-Professional Responsibility:
-● High standards in software development and testing will be maintained.
-● Black-box testing will be done to check the integrity of the project
-● Comprehensive documentation and user training materials will be provided to staff.
-Stakeholder Communication:
-● The system’s capabilities and limitations will be clearly communicated to all
-stakeholders.
-● Project specification and Service Level Agreement (SLA) will be clearly explained
-to stakeholders and product owner
-● Feedback and concerns from users and affected parties will be addressed openly.
-Environmental Responsibility:
-● The system will be designed to minimize unnecessary waste and reduce energy
-consumption.
-● Project's aim is to reduce the wastage of food and goods based on computer vision
-- deep learning promoting environmental benefit.
-● Sustainable inventory practices will be promoted through accurate forecasting and
-management.
-2. Requirements
-2.2 Functional Requirements
-2.2.1 Stock Tracking Module:
-● Real-time monitoring of product availability
-● Automated stock level updates
-● Integration with existing inventory databases
-2.2.2 Quality Monitoring Module:
-● Visual analysis of product images to detect defects
-● Classification of product condition (normal, deteriorated)
-2.2.3 Deterioration Level Tracking:
-● Machine learning model for assessing deterioration levels in food products
-● Trend analysis of product deterioration over time
-● Alerts for products approaching critical deterioration levels
-2.2.4 Expiration Date Monitoring:
-● Extract expiration dates from product packaging
-● Automated flagging of items nearing expiration
-● Reporting functionality for soon-to-expire products
-2.2.5 Inventory Forecasting Module:
-● Analysis of historical sales data using time-series forecasting
-● Prediction of future stock requirements
-2.2.6 User Interface:
-● Web-based dashboard for accessing all system features
-● Customizable views and reports
-● Provide real-time notifications and alerts within the user interface
-2.3 Non-Functional Requirements
-2.3.1 Data Management:
-● Secure storage of stock information and historical sales data
-● Data backup and recovery procedures
-2.3.2 Performance and Scalability:
-● Support for image processing
-● Ability to handle diverse product catalogs
-● Scalable architecture to accommodate business growth
-2.3.3 Security and Compliance:
-● Role-based access control
-● Encryption of sensitive data
-● Compliance with relevant data protection regulations
-2.3.4 Documentation and Training:
-● Comprehensive user manuals and system documentation
-● Training materials for system administrators and end-users
-● Regular updates to reflect system improvements and new features
-3. References
-● https://www.ieee.org/about/corporate/governance/p7-8.html
-● https://www.acm.org/code-of-ethics
+Project
+Team Erdem Atak, Zeynep Bakanoğulları, İrem Su Gül
+Advisor
+Tansel Dökeroğlu
+Jury
+Members Eren Ulu, Fırat Akba
+2
+Table
+Table ofof ContentsContents
+1.1. IntroductionIntroduction …………………………………………………………………………………………………………33
+2.2. CurrentCurrent SystemSystem …………………………………….……………………………………………….…………33
+3.3. ProposedProposed SystemSystem …………………………………………….…………………………………………….44
+3.1:3.1: OverviewOverview ……………………………………………………………………………………………………44--55
+3.2:3.2: FunctionalFunctional RequirementsRequirements ………………………………………………………………55
+3.2.1:3.2.1: StockStock TrackingTracking ModuleModule……………………….………………………. 55
+3.2.2:3.2.2: QualityQuality MonitoringMonitoring Module……………………Module……………………55
+3.2.3:3.2.3: DeteriorationDeterioration TrackingTracking ModuleModule……………….……………….66
+3.2.4:3.2.4: ExpirationExpiration DateDate MonitoringMonitoring ModuleModule………….………….66
+3.2.5:3.2.5: InventoryInventory ForecastingForecasting SystemSystem………………..………………..66
+3.3:3.3: NonfunctionalNonfunctional RequirementsRequirements …………………………………………………………77
+3.3.1:3.3.1: PerformancePerformance …………………………………….…………………………………….77
+3.3.2:3.3.2: SecuritySecurity ………………………………………….………………………………………….77
+3.3.3:3.3.3: ReliabilityReliability ………………………………………..………………………………………..77
+3.3.4:3.3.4: UsabilityUsability ……………………………………………………………………………………88
+3.3.5:3.3.5: MaintainabilityMaintainability ……………………………………………………………………....88
+3.3.6:3.3.6: ScalabilityScalability ………………………………………..………………………………………..99
+3.3.7:3.3.7: CompatibilityCompatibility …………………………………….…………………………………….99
+3.4:3.4: PseudoPseudo RequirementsRequirements …………………………………………………………………………99
+3.5:3.5: SystemSystem ModelsModels ……………………………………………………………………………………......1010
+3.5.1:3.5.1: ScenariosScenarios ………………………………………………………………………………..1010--1111
+3.5.2:3.5.2: UseUse CaseCase DiagramDiagram …………………………….…………………………….1212
+3.5.3:3.5.3: ClassClass DiagramDiagram ………………………………….………………………………….1313
+3.5.4:3.5.4: DynamicDynamic ModelsModels ………………………………..………………………………..1414
+3.5.5:3.5.5: UserUser Interface:Interface: ScreenScreen MockMock--upsups ……………..……………..1155--1919
+3.5.6:3.5.6: FeaturesFeatures ofof SystemSystem InterfaceInterface ModulesModules ………..………..2020--2121
+4.4. GlossaryGlossary …………………………………………………………..…………………………………………………………..2222
+5.5. ReferencesReferences ……………………………………………………….……………………………………………………….2323
+3
+1.</p>
+<ol>
+<li>IntroductionIntroduction
+The
+The AIAI--PoweredPowered InventoryInventory andand QualityQuality MonitoringMonitoring SystemSystem representsrepresents anan innovativeinnovative solutionsolution designeddesigned toto addressaddress criticalcritical challengeschallenges inin inventoryinventory managementmanagement andand qualityquality control,control, particularlyparticularly forfor businessesbusinesses handlinghandling perishableperishable goods.goods. ThisThis analysisanalysis documentdocument examinesexamines thethe systemsystem requirements,requirements, constraints,constraints, andand proposedproposed solutionssolutions basedbased onon thethe initialinitial projectproject specifications.specifications.
+The
+The systemsystem aimsaims toto revolutionizerevolutionize traditionaltraditional inventoryinventory managementmanagement byby incorporatingincorporating advancedadvanced technologiestechnologies suchsuch asas computercomputer visionvision andand machinemachine learninglearning toto automateautomate variousvarious aspectsaspects ofof stockstock trackingtracking andand qualityquality control.control. ThisThis analysisanalysis willwill detaildetail howhow thethe systemsystem willwill function,function, itsits requirements,requirements, andand thethe challengeschallenges itit aimsaims toto address.address.</li>
+<li></li>
+<li>CurrentCurrent SystemSystem
+Currently,
+Currently, mostmost businessesbusinesses relyrely onon manualmanual processesprocesses forfor inventoryinventory managementmanagement andand qualityquality control,control, whichwhich presentspresents severalseveral challenges:challenges:
+•
+ManualManual stockstock trackingtracking leadingleading toto humanhuman errorerror
+•
+InefficientInefficient qualityquality monitoringmonitoring processesprocesses
+•
+DelayedDelayed detectiondetection ofof productproduct deteriorationdeterioration
+•
+ManualManual expirationexpiration datedate checkingchecking
+•
+ReactiveReactive ratherrather thanthan predictivepredictive inventoryinventory managementmanagement
+•
+TimeTime--consumingconsuming physicalphysical inventoryinventory countscounts
+•
+InconsistentInconsistent qualityquality assessmentassessment standardsstandards
+•
+LimitedLimited datadata collectioncollection forfor trendtrend analysisanalysis
+•
+HighHigh dependencydependency onon humanhuman judgmentjudgment forfor qualityquality assessmentassessment
+These
+These limitationslimitations resultresult in:in:
+•
+IncreasedIncreased productproduct wastewaste
+•
+HigherHigher operationaloperational costscosts
+•
+ReducedReduced efficiencyefficiency
+•
+InconsistentInconsistent qualityquality controlcontrol
+•
+PotentialPotential customercustomer dissatisfactiondissatisfaction
+•
+FinancialFinancial losseslosses duedue toto spoilagespoilage
+•
+InefficientInefficient resourceresource allocationallocation
+4</li>
+<li></li>
+<li>ProposedProposed SystemSystem
+3.1
+3.1 OverviewOverview
+The
+The proposedproposed systemsystem automatesautomates inventoryinventory managementmanagement andand qualityquality monitoringmonitoring usingusing imageimage recognitionrecognition andand machinemachine learninglearning models.models. KeyKey modulesmodules includeinclude stockstock tracking,tracking, qualityquality assessment,assessment, expirationexpiration monitoring,monitoring, andand inventoryinventory forecasting.forecasting. TheThe systemsystem ensuresensures accuracy,accuracy, reducesreduces manualmanual intervention,intervention, andand optimizesoptimizes stockstock managementmanagement decisions.decisions.TheThe proposedproposed systemsystem willwill integrateintegrate severalseveral keykey technologiestechnologies toto createcreate aa comprehensivecomprehensive solution:solution:</li>
+<li>QualityQuality ControlControl SystemSystem
+◦
+ComputerComputer visionvision--basedbased defectdefect detectiondetection
+◦
+AutomatedAutomated updates to reflect changes in the inventory
+◦
+VisualVisual inspectioninspection usingusing imageimage recognitionrecognition toto detectdetect defects.defects.
+◦
+AssessingAssessing productproduct deteriorationdeterioration levelslevels throughthrough machinemachine learninglearning
+◦
+ClassificationClassification ofof productproduct conditionsconditions (e.g.,(e.g., normal,normal, deteriorated,deteriorated, defective)defective)</li>
+<li>StockStock TrackingTracking SystemSystem
+◦
+Realeal--timetime monitoringmonitoring of stock levels
+◦
+IntegrationIntegration withwith existingexisting inventoryinventory databasesdatabases
+◦
+ContinuousContinuous stockstock levellevel updatesupdates</li>
+<li>ExpirationExpiration ManagementManagement
+◦
+AutomatedAutomated datedate recognitionrecognition
+◦
+ProactiveProactive expirationexpiration alertsalerts
+◦
+SystematicSystematic trackingtracking</li>
+<li>Inventory ForecastingForecasting SystemSystem
+◦
+Time-series salesales datadata analysisanalysis
+◦
+PredictivePredictive inventoryinventory managementmanagement
+◦
+ForecastingForecasting futurefuture stockstock requirementsrequirements toto avoidavoid underunder-- oror overover--stocking.stocking.</li>
+<li>UserUser InterfaceInterface System
+◦
+AA webweb--basedbased dashboarddashboard providing:providing:
+5
+◦
+SummarySummary ofof inventoryinventory levels.levels.
+◦
+QualityQuality alertsalerts andand forecasts.forecasts.
+◦
+DetailedDetailed reports.reports.
+3.2
+3.2 FunctionalFunctional RequirementsRequirements
+3.2.13.2.1 StockStock TrackingTracking ModuleModule</li>
+<li>Real-time Inventory Monitoring
+◦
+AutomatedAutomated stockstock levellevel trackingtracking
+◦
+ProductProduct identificationidentification andand countingcounting
+◦
+StockStock movementmovement trackingtracking
+◦
+InventoryInventory reconciliationreconciliation
+◦
+AlertAlert generationgeneration forfor lowlow stockstock levelslevels</li>
+<li>DatabaseDatabase IntegrationIntegration
+◦
+RealReal--timetime synchronizationsynchronization
+◦
+HistoricalHistorical datadata maintenancemaintenance
+◦
+DataData backupbackup andand recoveryrecovery
+3.2.2 Quality Monitoring Module</li>
+<li>DefectDefect DetectionDetection
+◦
+VisualVisual analysisanalysis ofof productsproducts
+◦
+AutomatedAutomated classificationclassification
+◦
+DefectDefect categorizationcategorization</li>
+<li>ImageImage ProcessingProcessing
+◦
+Processing of the image to be compatible with machine learning model
+◦
+MultipleMultiple angleangle analysisanalysis if the images are available
+◦
+ImageImage storagestorage
+6
+3.2.3
+3.2.3 DeteriorationDeterioration LevelLevel TrackingTracking</li>
+<li>MLML--BasedBased Model
+◦
+Monitoring of detention based on images
+◦
+AssessingAssessing productproduct deteriorationdeterioration levelslevels throughthrough machinemachine learning.learning.
+◦
+ProgressiveProgressive deteriorationdeterioration trackingtracking</li>
+<li>Alert System
+◦
+Generating notifications on the system nearing critical detonation levels detected by ML model
+◦
+AutomatedAutomated reportingreporting
+3.2.43.2.4 ExpirationExpiration DateDate MonitoringMonitoring</li>
+<li>DateDate RecognitionRecognition
+◦
+OCROCR--basedbased datedate extractionextraction
+◦
+FormatFormat standardizationstandardization
+◦
+BatchBatch processingprocessing capabilitycapability
+◦
+VerificationVerification systemsystem</li>
+<li>Alert Management
+◦
+AutomatedAutomated alertsalerts forfor productsproducts nearingnearing expiration.expiration.
+◦
+ReportingReporting featuresfeatures forfor proactiveproactive decisiondecision--making.making.
+◦
+ActionAction recommendationrecommendation
+3.2.53.2.5 InventoryInventory ForecastingForecasting System</li>
+<li>DataData AnalysisAnalysis
+◦
+HistoricalHistorical salessales analysisanalysis
+◦
+SeasonalSeasonal trendtrend identificationidentification
+◦
+DemandDemand patternpattern recognitionrecognition</li>
+<li>PredictionPrediction SystemSystem
+◦
+StockStock levellevel optimizationoptimization
+◦
+ForecastingForecasting futurefuture stockstock requirementsrequirements toto avoidavoid underunder-- oror overover--stockingstocking
+7
+3.3
+3.3 NonfunctionalNonfunctional RequirementsRequirements
+3.3.13.3.1 PerformancePerformance
+•
+SystemSystem mustmust processprocess singlesingle productproduct imageimage analysisanalysis withinwithin 10 secondsseconds
+•
+DashboardDashboard mustmust loadload withinwithin 1.51.5 secondsseconds withwith upup toto 10,00010,000 inventoryinventory itemsitems
+•
+SystemSystem mustmust supportsupport minimumminimum 100100 concurrentconcurrent usersusers withoutwithout performanceperformance degradationdegradation
+•
+DatabaseDatabase queriesqueries mustmust completecomplete withinwithin 5 seconds forfor standardstandard operationsoperations
+•
+ImageImage processingprocessing pipelinepipeline mustmust handlehandle minimumminimum 1 imagesimages perper minuteminute
+•
+SystemSystem uptimeuptime ofof 99.9%99.9% measuredmeasured monthlymonthly (maximum(maximum 43.243.2 minutesminutes downtimedowntime perper month)month)
+•
+MaximumMaximum memorymemory usageusage mustmust notnot exceedexceed 8GB8GB underunder fullfull loadload
+•
+APIAPI endpointsendpoints mustmust respondrespond withinwithin 200ms200ms forfor GETGET requestsrequests andand 500ms500ms forfor POSTPOST requestsrequests
+3.3.23.3.2 SecuritySecurity
+•
+ImplementationImplementation ofof AESAES--256256 encryptionencryption forfor datadata atat restrest
+•
+PasswordPassword requirements:requirements: minimumminimum 6 characters,characters, mustmust includeinclude uppercase,uppercase, lowercase,lowercase, numbers,numbers, andand specialspecial characterscharacters
+•
+FailedFailed loginlogin attemptsattempts limitedlimited toto 55 withinwithin 1515 minutesminutes beforebefore temporarytemporary accountaccount lockoutlockout
+•
+AllAll systemsystem actionsactions mustmust bebe loggedlogged withwith timestamp,timestamp, useruser ID,ID, andand IPIP addressaddress
+•
+DatabaseDatabase backupsbackups everyevery 66 hourshours withwith 3030--dayday retentionretention periodperiod
+3.3.33.3.3 ReliabilityReliability
+•
+SystemSystem recoveryrecovery timetime (RTO)(RTO) mustmust notnot exceedexceed 44 hourshours
+•
+AutomatedAutomated failoverfailover mechanismmechanism mustmust activateactivate withinwithin 3030 secondsseconds ofof primaryprimary systemsystem failurefailure
+•
+DataData consistencyconsistency checkschecks mustmust runrun everyevery 1515 minutesminutes
+•
+ErrorError logslogs mustmust bebe maintainedmaintained forfor minimumminimum 9090 daysdays
+•
+SystemSystem mustmust handlehandle minimumminimum 10,00010,000 transactionstransactions perper hourhour
+•
+AutomatedAutomated backupbackup systemsystem with:with:
+◦
+HourlyHourly incrementalincremental backupsbackups
+◦
+DailyDaily fullfull backupsbackups
+◦
+WeeklyWeekly offoff--sitesite backupsbackups
+◦
+MonthlyMonthly archivearchive backupsbackups withwith 11--yearyear retentionretention
+•
+ErrorError reportingreporting withinwithin a day
+8
+3.3.43.3.4 UsabilityUsability
+•
+MaximumMaximum 5 clicksclicks toto reachreach anyany majormajor functionfunction fromfrom thethe mainmain dashboarddashboard
+•
+AllAll criticalcritical functionsfunctions mustmust bebe accessibleaccessible viavia keyboardkeyboard shortcutsshortcuts
+•
+SystemSystem responseresponse feedbackfeedback withinwithin 500msms ofof useruser actionaction
+•
+ErrorError messagesmessages mustmust bebe specificspecific andand suggestsuggest correctivecorrective actionaction
+•
+SearchSearch resultsresults mustmust appearappear withinwithin 11 secondseconds
+•
+UIUI mustmust supportsupport minimumminimum screenscreen resolutionresolution ofof 1366x7681366x768
+•
+FormForm completioncompletion timetime mustmust notnot exceedexceed 11 minuteminute forfor standardstandard operationsoperations
+•
+SystemSystem mustmust supportsupport thethe followingfollowing browsers:browsers:
+◦
+Chrome
+◦
+FirefoxFirefox
+◦
+Safari
+◦
+EdgeEdge
+•
+InterfaceInterface texttext mustmust maintainmaintain minimumminimum contrastcontrast ratioratio ofof 4.5:14.5:1
+•
+AllAll interactiveinteractive elementselements mustmust havehave minimumminimum touchtouch targettarget sizesize ofof 44x4444x44 pixelspixels
+3.3.53.3.5 MaintainabilityMaintainability
+•
+CodeCode documentationdocumentation coveragecoverage minimumminimum 80%80%
+•
+AutomatedAutomated testtest coveragecoverage minimumminimum 85%85%
+•
+MaximumMaximum bugbug resolutionresolution time:time:
+◦
+Critical:Critical: 44 hourshours
+◦
+High:High: 2424 hourshours
+◦
+Medium:Medium: 7272 hourshours
+◦
+Low:Low: 11 weekweek
+•
+SystemSystem logslogs mustmust bebe structuredstructured inin JSONJSON formatformat
+•
+APIAPI versioningversioning systemsystem withwith supportsupport forfor minimumminimum 22 previousprevious versionsversions
+9
+3.3.63.3.6 ScalabilityScalability
+•
+SystemSystem mustmust scalescale horizontallyhorizontally toto handlehandle 100%% increaseincrease inin loadload
+•
+DatabaseDatabase mustmust supportsupport minimumminimum 100GB ofof datadata withwith queryquery performanceperformance degradationdegradation notnot exceedingexceeding 10%10%
+•
+StorageStorage systemsystem mustmust supportsupport 50%50% annualannual growthgrowth inin datadata volumevolume
+•
+MessageMessage queuequeue mustmust handlehandle minimumminimum 10001000 messagesmessages perper secondsecond
+3.3.73.3.7 CompatibilityCompatibility
+•
+RESTREST APIAPI mustmust supportsupport JSONJSON format
+•
+DataData exportexport inin CSV,CSV, JSON,JSON, andand PDFPDF formatsformats based on the user need
+•
+SupportSupport forfor standardstandard imageimage formats:formats:
+◦
+JPEGJPEG (up(up toto 10MB)
+◦
+PNGPNG (up(up toto 20MB)
+•
+DatabaseDatabase compatibilitycompatibility withwith PostgreSQLPostgreSQL 1313
+3.4 Pseudo Requirements</li>
+<li></li>
+<li>HardwareHardware RequirementsRequirements::
+•• CCamerasameras forfor imageimage capturecapture fromfrom differentdifferent angles.angles.
+•• SufficientSufficient storagestorage forfor historicalhistorical data.data.</li>
+<li></li>
+<li>EmployeeEmployee AdaptationAdaptation::
+•• UserUser--friendlyfriendly interfacesinterfaces toto minimizeminimize resistanceresistance fromfrom staffstaff toto learnlearn thethe systemsystem ..
+•• TrainingTraining sessionssessions toto ensureensure easyeasy andand smoothsmooth adoption.adoption.</li>
+<li></li>
+<li>EthicalEthical RequirementsRequirements
+•• ACMACM codecode ofof ethicsethics andand IEEEIEEE codecode ofof ethicsethics willwill bebe followed.followed.
+10
+3.5
+3.5 SystemSystem ModelsModels
+3.5.1 Scenarios
+ScenarioScenario 1:1: InventoryInventory StockStock UpdateUpdate
+•
+Actor:Actor: InventoryInventory ManagerManager
+•
+Goal: UpdateUpdate stockstock levelslevels afterafter aa newnew shipmentshipment arrives.arrives.
+•
+Preconditions:Preconditions: TheThe shipmentshipment hashas beenbeen loggedlogged inin thethe system,system, andand imagesimages ofof productsproducts areare available.available.
+•
+Steps:Steps:</li>
+<li>InventoryInventory ManagerManager logslogs intointo thethe systemsystem viavia thethe dashboard.dashboard.</li>
+<li>SelectsSelects &quot;Stock&quot;Stock Tracking&quot;Tracking&quot; fromfrom thethe menu.menu.</li>
+<li>UploadsUploads productproduct imagesimages viavia thethe stockstock updateupdate interface.interface.</li>
+<li>SystemSystem identifiesidentifies andand categorizescategorizes productsproducts usingusing imageimage recognition.recognition.</li>
+<li>UpdatedUpdated stockstock levelslevels areare reflectedreflected inin thethe dashboard.dashboard.
+•
+Postconditions:Postconditions: StockStock levelslevels areare updated,updated, andand alertsalerts forfor criticalcritical stockstock areare resolvedresolved ifif applicable.applicable.
+ScenarioScenario 2:2: QualityQuality CheckCheck AlertAlert
+•
+Actor:Actor: QualityQuality ControlControl SpecialistSpecialist
+•
+Goal: IdentifyIdentify andand addressaddress defectivedefective products.products.
+•
+Preconditions:Preconditions: SystemSystem hashas processedprocessed imagesimages ofof productsproducts andand flaggedflagged defects.defects.
+•
+Steps:Steps:</li>
+<li>QualityQuality ControlControl SpecialistSpecialist accessesaccesses thethe &quot;Quality&quot;Quality Alerts&quot;Alerts&quot; sectionsection ofof thethe dashboard.dashboard.</li>
+<li>ViewsViews flaggedflagged productsproducts andand defectdefect detailsdetails (e.g.,(e.g., typetype andand locationlocation ofof defect).defect).</li>
+<li>MarksMarks itemsitems forfor removalremoval oror sendssends themthem forfor furtherfurther inspection.inspection.</li>
+<li>UpdatesUpdates thethe statusstatus inin thethe systemsystem toto reflectreflect thethe actionaction taken.taken.
+•
+Postconditions:Postconditions: DefectiveDefective productsproducts areare removedremoved oror addressed,addressed, andand thethe systemsystem recordsrecords thethe action.action.
+Scenario
+Scenario 3:3: ExpirationExpiration DateDate NotificationNotification
+•
+Actor:Actor: StoreStore SupervisorSupervisor
+•
+Goal: TakeTake proactiveproactive actionsactions onon productsproducts nearingnearing expiration.expiration.
+11
+•
+Preconditions:Preconditions: SystemSystem hashas scannedscanned expirationexpiration datesdates andand flaggedflagged itemsitems nearingnearing theirtheir expiration.expiration.
+•
+Steps:Steps:</li>
+<li>SupervisorSupervisor receivesreceives anan automatedautomated expirationexpiration alertalert onon thethe dashboard.dashboard.</li>
+<li>NavigatesNavigates toto thethe &quot;Expiration&quot;Expiration Management&quot;Management&quot; module.module.</li>
+<li>ReviewsReviews thethe listlist ofof productsproducts nearingnearing expirationexpiration andand associatedassociated details.details.</li>
+<li>DecidesDecides onon actionsactions suchsuch asas discountsdiscounts oror removalremoval fromfrom inventory.inventory.</li>
+<li>UpdatesUpdates productproduct statusstatus inin thethe system.system.
+•
+Postconditions:Postconditions: ProductsProducts nearingnearing expirationexpiration areare managedmanaged appropriately,appropriately, minimizingminimizing waste.waste.
+ScenarioScenario 4:4: ForecastingForecasting InventoryInventory NeedsNeeds
+•
+Actor:Actor: SupplySupply ChainChain AnalystAnalyst
+•
+Goal: PlanPlan inventoryinventory ordersorders basedbased onon predictivepredictive data.data.
+•
+Preconditions:Preconditions: HistoricalHistorical salessales datadata andand seasonalseasonal trendstrends areare available.available.
+•
+Steps:Steps:</li>
+<li>AnalystAnalyst accessesaccesses thethe &quot;Forecast&quot;Forecast Insights&quot;Insights&quot; sectionsection onon thethe dashboard.dashboard.</li>
+<li>ViewsViews demanddemand forecastsforecasts forfor thethe upcomingupcoming weeksweeks oror months.months.</li>
+<li>DownloadsDownloads reportsreports withwith recommendationsrecommendations forfor reorderreorder quantities.quantities.</li>
+<li>CommunicatesCommunicates recommendationsrecommendations toto procurementprocurement teams.teams.
+•
+Postconditions:Postconditions: InventoryInventory levelslevels areare optimizedoptimized toto meetmeet futurefuture demand.demand.
+ScenarioScenario 5:5: SystemSystem DowntimeDowntime andand RecoveryRecovery
+•
+Actor:Actor: SystemSystem AdministratorAdministrator
+•
+Goal: EnsureEnsure minimalminimal disruptiondisruption duringduring downtime.downtime.
+•
+Preconditions:Preconditions: SystemSystem experiencesexperiences anan unexpectedunexpected failure.failure.
+•
+Steps:Steps:</li>
+<li>AdministratorAdministrator isis alertedalerted byby thethe automatedautomated failoverfailover mechanism.mechanism.</li>
+<li>LogsLogs intointo thethe backupbackup systemsystem toto monitormonitor ongoingongoing operations.operations.</li>
+<li>InvestigatesInvestigates rootroot causecause usingusing errorerror logs.logs.</li>
+<li>RestoresRestores thethe primaryprimary systemsystem withinwithin thethe specifiedspecified time.
+•
+Postconditions:Postconditions: SystemSystem returnsreturns toto normalnormal operationsoperations withwith minimalminimal downtimedowntime andand datadata loss.loss.
+12
+3.5.2 Use Case Diagram
+Use Case Diagram
+13
+3.5.3 Class Diagram
+Class Diagram
+14
+3.5.4 Dynamic Models
+Sequence Diagram 2
+15
+3
+3.5.5.5.5 UserUser InterfaceInterface -- NavigatiNavigationalonal PathsPaths andand ScreenScreen MockMock--upsups
+Main Dashboard 1
+Main Dashboard 2
+16
+Quality Control 1
+Quality Control 2
+17
+Forecast 1
+Forecast 2
+Forecast 3
+18
+Stock Management
+Expiration Tracking
+19
+Notifications
+20
+3.5.6 Features of System Interface Modules
+Main
+Main DashboardDashboard
+On the Main Page:
+•
+StockStock levelslevels overviewoverview
+•
+QualityQuality alertsalerts sectionsection
+•
+ExpirationExpiration warningswarnings
+•
+ForecastForecast insightsinsights
+•
+Menu selection on the left side of the dashboard
+•
+Notifications on the toğ right of the dashboard
+Stock ManagementManagement
+•
+StockStock levellevel detailsdetails
+•
+ProductProduct categorizationcategorization
+•
+Add new items button
+•
+Filtering option
+Quality
+Quality ControlControl
+•
+Total number of inspections
+•
+Failed number of inspections
+•
+Pass rate
+•
+Average response time of the inspection
+•
+DefectDefect detectiondetection resultsresults
+•
+DeteriorationDeterioration trackingtracking
+•
+Alert management
+•
+Filtering option
+•
+Adding new item to be inspected option
+•
+Exporting feature
+Expiration Tracking
+•
+Total expiring items
+•
+Weekly expiring items
+•
+Critical expiring items
+•
+Filtering option
+21
+Forecasting Module
+•
+Total projected sale
+•
+Total stock level
+•
+Estimated turn-over
+•
+Stock-out risked items
+•
+Sales forecast graph
+•
+Inventory projection graph
+Reports
+Reports
+•
+DataData visualizationvisualization
+•
+ExportExport feature
+•
+Future forecast with time-series analysis of sales data
+Notifications
+•
+Quality check notification
+•
+Critical expiring items notifications
+•
+Inventory notifications
+•
+Low stock alerts
+•
+Marked as read and clear features
+22</li>
+<li></li>
+<li>GlossaryGlossary
+•
+CNNCNN:: ConvolutionalConvolutional NeuralNeural NetworkNetwork
+•
+OCROCR:: OpticalOptical CharacterCharacter RecognitionRecognition
+•
+MLML:: MachineMachine LearningLearning
+•
+MB: Megabyte: a size unit
+•
+RTO: System Recovery Time
+•
+API:: ApplicationApplication ProgrammingProgramming InterfaceInterface
+•
+SLA:: ServiceService LevelLevel AgreementAgreement
+•
+GDPRGDPR:: GeneralGeneral DataData ProtectionProtection RegulationRegulation
+•
+UI:: UserUser InterfaceInterface
+•
+PostgreSQL:: OpenOpen--sourcesource relationalrelational databasedatabase
+•
+NoSQL:: NonNon--relationalrelational databasedatabase
+•
+ReactReact:: JavaScriptJavaScript librarylibrary forfor buildingbuilding useruser interfacesinterfaces
+•
+PyTorchPyTorch:: MachineMachine learninglearning frameworkframework
+•
+Python: Programming language
+•
+ClassClass Diagram:Diagram:
+•
+RepresentsRepresents thethe structurestructure ofof aa system.system.
+•
+ShowsShows classes,classes, theirtheir attributes,attributes, methods,methods, andand thethe relationshipsrelationships (e.g.,(e.g., inheritance,inheritance, association)association) betweenbetween classes.classes.
+•
+Example:Example: AA PersonPerson classclass mightmight havehave attributesattributes likelike namename andand ageage andand methodsmethods likelike speak()speak() oror walk().walk().
+•
+SequenceSequence Diagram:Diagram:
+•
+RepresentsRepresents thethe interactioninteraction betweenbetween objectsobjects inin aa specificspecific sequencesequence overover time.time.
+•
+ShowsShows objectsobjects andand thethe messagesmessages exchangedexchanged toto completecomplete aa processprocess oror useuse case.case.
+•
+Example:Example: AA loginlogin processprocess showingshowing howhow aa UserUser sendssends credentialscredentials toto AuthService,AuthService, whichwhich verifiesverifies themthem andand responds.responds.
+•
+UseUse CaseCase Diagram:Diagram:
+•
+RepresentsRepresents thethe functionalitiesfunctionalities ofof aa system.system.
+•
+ShowsShows actorsactors (users(users oror externalexternal systems)systems) andand theirtheir interactionsinteractions withwith useuse casescases (system(system functionalities).functionalities).
+•
+Example:Example: AnAn onlineonline shoppingshopping systemsystem mightmight havehave useuse casescases likelike BrowseBrowse Products,Products, AddAdd toto Cart,Cart, andand Checkout,Checkout, withwith CustomerCustomer asas anan actor.actor.
+23</li>
+<li></li>
+<li>ReferencesReferences
+•
+ProjectProject ProposalProposal DocumentDocument (CMPE491_Project_Proposal.pdf)(CMPE491_Project_Proposal.pdf)
+•
+ProjectProject SpecificationSpecification ReportReport--2.pdf2.pdf
+•
+IEEEIEEE CodeCode ofof EthicsEthics ((<a href="https://www.ieee.org/about/corporate/governance/p7https://www.ieee.org/about/corporate/governance/p7--8.html8.html">https://www.ieee.org/about/corporate/governance/p7https://www.ieee.org/about/corporate/governance/p7--8.html8.html</a>)
+•
+ACMACM CodeCode ofof EthicsEthics ((<a href="https://www.acm.org/codehttps://www.acm.org/code--ofof--ethicsethics">https://www.acm.org/codehttps://www.acm.org/code--ofof--ethicsethics</a>)</li>
+</ol>
