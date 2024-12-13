@@ -1,4 +1,4 @@
-## Welcome to Our Project
+## Welcome to Project
 
 This is the AI-Powered Inventory and Quality Monitoring System project, aiming to revolutionize stock management and quality control.
 
@@ -7,3 +7,6 @@ This is the AI-Powered Inventory and Quality Monitoring System project, aiming t
 [View the Project Specification Report](./SRS/)
 
 [View the Analyses Report](./Analyses/)
+
+[View the TODO/Sprint Backlog](./todo/)
+
