@@ -4,9 +4,9 @@ This is the AI-Powered Inventory and Quality Monitoring System project, aiming t
 
 [View the Project Proposal](./proposal.md/)
 
-[View the Project Specification Report](./SRS/)
+[View the Project Specification Report](./SRS.md/)
 
-[View the Analyses Report](./Analyses/)
+[View the Analyses Report](./Analyses.md/)
 
-[View the TODO/Sprint Backlog](./todo/)
+[View the TODO/Sprint Backlog](./todo.md/)
 
