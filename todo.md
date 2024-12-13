@@ -1,3 +1,9 @@
+---
+layout: page
+title: AI-Powered Inventory and Quality Monitoring System
+permalink: /todo/
+---
+
 # AI-Powered Inventory and Quality Monitoring System - Project Backlog
 
 ## Sprint Schedule
