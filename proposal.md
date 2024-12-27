@@ -73,8 +73,8 @@ The final system is expected to deliver the following outcomes:
 ---
 
 ### 7. Tools and Technologies
-- **Programming Languages**: Python, Java
-- **Frameworks**: PyTorch, React, SpringBoot
+- **Programming Languages**: Python
+- **Frameworks**: PyTorch, React
 - **Libraries**: OpenCV, Scikit-learn, Pandas
 - **Machine Learning Models**: CNNs, Time-Series Forecasting
 - **Database**: PostgreSQL - NoSQL
