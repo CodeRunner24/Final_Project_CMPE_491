@@ -10,6 +10,7 @@ This is the AI-Powered Inventory and Quality Monitoring System project, aiming t
 
 [View the TODO/Sprint Backlog](./todo.md/)
 
-[View the High Level Design Report](./High_Level_Design_Report.md/)
+[View the High Level Design Report](.High-Level_Design_Report_CMPE_491.pdf)
+
 
 
